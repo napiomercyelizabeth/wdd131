@@ -1,0 +1,55 @@
+/* Styling the overall page layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+
+    /* Setting up grid on the body for main layout columns */
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* Making header and footer stretch across the entire top and bottom */
+header, footer {
+    grid-column: 1 / -1;
+    background-color: #003366;
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Aligning navigation menu links side by side using flexbox */
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Setting up main content area on the left side */
+main {
+    grid-column: 1 / 2;
+    padding: 1.5rem;
+    background-color: #ffffff;
+}
+
+/* Setting up sidebar section on the right side */
+aside {
+    grid-column: 2 / 3;
+    padding: 1.5rem;
+    background-color: #e2e8f0;
+}
