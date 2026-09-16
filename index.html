@@ -1,14 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Dynamic Web Fundamentals – Napio Mercy Elizabeth</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals course homepage for Napio Mercy Elizabeth, featuring web development projects, assignments, and resources.">
+    <meta name="author" content="Napio Mercy Elizabeth">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>WDD 131-Napio Mercy Elizabeth</h1>
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav>
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Napio Mercy Elizabeth</h1>
+        
+        <div class="card-container">
+            <section class="card">
+                <h2>About Me</h2>
+                <img src="images/profile.jpg" alt="Profile photo of Napio Mercy Elizabeth" width="150">
+                <p>Hello! I am a student taking WDD 131 to learn dynamic web application development using modern HTML, CSS, and JavaScript.</p>
+            </section>
+
+            <section class="card">
+                <h2>Web Dev Resources</h2>
+                <p>Key tools and platforms used in this course:</p>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
+                    <li><a href="https://w3schools.com" target="_blank">W3Schools</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Napio Mercy Elizabeth | Uganda</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
