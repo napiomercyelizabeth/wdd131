@@ -1,0 +1,115 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+header {
+    background-color: #0d3b66;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+}
+
+header span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Hamburger button styling */
+#menu {
+    font-size: 1.5rem;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❌";
+}
+
+/* Navigation flex layout for mobile toggle */
+nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0d3b66;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+nav.open {
+    display: flex;
+}
+
+nav a {
+    color: #fff;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav a:hover {
+    background-color: #f4d35e;
+    color: #0d3b66;
+}
+
+/* Main content layout */
+main {
+    max-width: 900px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+}
+
+main h1 {
+    text-align: center;
+    color: #0d3b66;
+}
+
+/* Single column grid for mobile */
+.album-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+figure {
+    margin: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+figcaption {
+    padding: 0.5rem 0;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #0d3b66;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}

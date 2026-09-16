@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album – WDD 131 – Napio Mercy Elizabeth</title>
+    <meta name="description" content="A responsive temple picture album featuring grid layouts and dynamic menu controls for WDD 131.">
+    <meta name="author" content="Napio Mercy Elizabeth">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Mobile-first CSS link order -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <span>Temple Album</span>
+        <button id="menu" aria-label="Toggle Menu"></button>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">Old</a>
+            <a href="#">New</a>
+            <a href="#">Large</a>
+            <a href="#">Small</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+        <div class="album-grid">
+            <figure>
+                <img src="images/temple.png" alt="Temple photo 1">
+                <figcaption>Aba Nigeria Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple.png" alt="Temple photo 2">
+                <figcaption>Accra Ghana Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple.png" alt="Temple photo 3">
+                <figcaption>Bern Switzerland Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple.png" alt="Temple photo 4">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple.png" alt="Temple photo 5">
+                <figcaption>Tokyo Japan Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple.png" alt="Temple photo 6">
+                <figcaption>Johannesburg South Africa Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple.png" alt="Temple photo 7">
+                <figcaption>Kinshasa DR Congo Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple.png" alt="Temple photo 8">
+                <figcaption>Paris France Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple.png" alt="Temple photo 9">
+                <figcaption>Rome Italy Temple</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Napio Mercy Elizabeth | Uganda</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

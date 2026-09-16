@@ -1,0 +1,22 @@
+@media (min-width: 600px) {
+    #menu {
+        display: none; /* Hide hamburger button on large screens */
+    }
+
+    nav {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        width: auto;
+        background-color: transparent;
+    }
+
+    nav a {
+        border-top: none;
+    }
+
+    /* Multi-column responsive grid for figures */
+    .album-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
