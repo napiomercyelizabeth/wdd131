@@ -1,0 +1,111 @@
+/* Color Scheme based on Uganda's Flag (Black, Yellow, Red) with high contrast for WCAG AA */
+:root {
+  --primary-bg: #000000;
+  --primary-accent: #ffd100;
+  --secondary-accent: #d90000;
+  --card-bg: #f9f9f9;
+  --text-dark: #111111;
+  --text-light: #ffffff;
+  --border-color: #cccccc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: #ffffff;
+}
+
+header {
+  background-color: var(--primary-bg);
+  color: var(--primary-accent);
+  text-align: center;
+  padding: 1.25rem 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+.card {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1.25rem;
+  background-color: var(--card-bg);
+}
+
+.card h2 {
+  color: var(--secondary-accent);
+  border-bottom: 3px solid var(--primary-accent);
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 0.4rem;
+}
+
+.label {
+  font-weight: bold;
+}
+
+/* SVG icon visible in Mobile view only */
+.weather-icon-mobile {
+  display: inline-block;
+}
+
+footer {
+  background-color: var(--primary-bg);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Wider / Desktop View Layout */
+@media (min-width: 800px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero {
+    grid-column: 1 / -1;
+  }
+
+  /* Hide SVG icon on desktop view */
+  .weather-icon-mobile {
+    display: none;
+  }
+
+  /* Pseudo-element emoticon in wider view only */
+  .weather-heading::after {
+    content: " ⛅";
+  }
+}

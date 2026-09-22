@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uganda - W03 Country Page</title>
+  <meta name="description" content="Country overview page for Uganda featuring general demographic data and static weather conditions.">
+  <meta name="author" content="Napio Mercy Elizabeth">
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Uganda</h1>
+  </header>
+
+  <main>
+    <!-- Hero Image Swap (Rubric Item 4: WebP + srcset/picture) -->
+    <div class="hero">
+      <picture>
+        <source srcset="images/hero-large.webp" media="(min-width: 800px)">
+        <img src="images/hero-small.webp" alt="Uganda landscape view" width="500" height="250">
+      </picture>
+    </div>
+
+    <!-- Data Section -->
+    <section class="card data-card">
+      <h2>Data</h2>
+      <ul>
+        <li><span class="label">Area:</span> 241,551 sq km</li>
+        <li><span class="label">Population:</span> ~48 Million</li>
+        <li><span class="label">Capital:</span> Kampala</li>
+        <li><span class="label">Languages:</span> English, Swahili</li>
+        <li><span class="label">Currency:</span> UGX</li>
+        <li><span class="label">Time Zone:</span> UTC+3</li>
+        <li><span class="label">Calling Code:</span> +256</li>
+      </ul>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="card weather-card">
+      <h2 class="weather-heading">
+        Weather
+        <!-- Inline SVG weather icon (Mobile View Only) -->
+        <svg class="weather-icon-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+      </h2>
+      <ul>
+        <li><span class="label">Temperature:</span> <span id="temp">9</span>°C</li>
+        <li><span class="label">Conditions:</span> Partly Cloudy</li>
+        <li><span class="label">Wind:</span> <span id="wind">10</span> km/h</li>
+        <li><span class="label">Wind Chill:</span> <span id="chill">N/A</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Napio Mercy Elizabeth | Uganda</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
