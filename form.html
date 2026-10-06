@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review Form</title>
+  <meta name="description" content="Submit a detailed product review rating, installation date, and features feedback.">
+  <meta name="author" content="Napio Mercy Elizabeth">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="form.css">
+  <script src="form.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Product Review</h1>
+  </header>
+
+  <main>
+    <form action="review.html" method="get">
+
+      <label for="product-select">
+        Product Name <span class="required">*</span>
+      </label>
+      <select id="product-select" name="productName" required>
+        <option value="" disabled selected>Select a Product ...</option>
+      </select>
+
+      <fieldset>
+        <legend>Overall Rating <span class="required">*</span></legend>
+        <div class="rating-group">
+          <label><input type="radio" name="rating" value="1" required> &#9733; 1</label>
+          <label><input type="radio" name="rating" value="2"> &#9733;&#9733; 2</label>
+          <label><input type="radio" name="rating" value="3"> &#9733;&#9733;&#9733; 3</label>
+          <label><input type="radio" name="rating" value="4"> &#9733;&#9733;&#9733;&#9733; 4</label>
+          <label><input type="radio" name="rating" value="5"> &#9733;&#9733;&#9733;&#9733;&#9733; 5</label>
+        </div>
+      </fieldset>
+
+      <label for="install-date">
+        Date of Installation <span class="required">*</span>
+      </label>
+      <input type="date" id="install-date" name="installDate" required>
+
+      <fieldset>
+        <legend>Useful Features (Check all that apply)</legend>
+        <label><input type="checkbox" name="features" value="durability"> Durability &amp; Build Quality</label>
+        <label><input type="checkbox" name="features" value="easeOfUse"> Ease of Use</label>
+        <label><input type="checkbox" name="features" value="performance"> Performance &amp; Speed</label>
+        <label><input type="checkbox" name="features" value="design"> Sleek Design &amp; Aesthetics</label>
+      </fieldset>
+
+      <label for="written-review">Written Review (Optional)</label>
+      <textarea id="written-review" name="reviewText" rows="5" placeholder="Share your experience with this product..."></textarea>
+
+      <label for="user-name">Your Name (Optional)</label>
+      <input type="text" id="user-name" name="userName" placeholder="e.g., Mercy Elizabeth">
+
+      <input type="submit" value="Post Review" class="submit-btn">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> | Napio Mercy Elizabeth | Uganda</p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>
