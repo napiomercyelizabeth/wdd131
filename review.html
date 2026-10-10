@@ -7,14 +7,7 @@
   <meta name="description" content="Thank you for submitting your product review.">
   <meta name="author" content="Napio Mercy Elizabeth">
   <link rel="stylesheet" href="form.css">
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      let count = Number(window.localStorage.getItem("reviewCount-ls")) || 0;
-      count++;
-      window.localStorage.setItem("reviewCount-ls", count);
-      document.getElementById("review-count-display").textContent = count;
-    });
-  </script>
+  <script src="form.js" defer></script>
 </head>
 <body>
 
@@ -36,7 +29,8 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 | Napio Mercy Elizabeth | Uganda</p>
+    <p>&copy; <span id="currentyear"></span> | Napio Mercy Elizabeth | Uganda</p>
+    <p id="lastModified"></p>
   </footer>
 
 </body>

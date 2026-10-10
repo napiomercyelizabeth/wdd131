@@ -7,8 +7,8 @@ const products = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
+  // 1. Populate product dropdown on form.html
   const selectElement = document.getElementById("product-select");
-
   if (selectElement) {
     products.forEach(product => {
       const option = document.createElement("option");
@@ -18,7 +18,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Footer metadata
+  // 2. Handle localStorage review counter on review.html
+  const reviewCountDisplay = document.getElementById("review-count-display");
+  if (reviewCountDisplay) {
+    let count = Number(window.localStorage.getItem("reviewCount-ls")) || 0;
+    count++;
+    window.localStorage.setItem("reviewCount-ls", count);
+    reviewCountDisplay.textContent = count;
+  }
+
+  // 3. Footer metadata dates
   const currentYearSpan = document.getElementById("currentyear");
   const lastModifiedPara = document.getElementById("lastModified");
 
